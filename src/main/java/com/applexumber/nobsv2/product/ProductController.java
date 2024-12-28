@@ -1,9 +1,12 @@
 package com.applexumber.nobsv2.product;
 
+import com.applexumber.nobsv2.exceptions.ProductNotFoundException;
+import com.applexumber.nobsv2.product.model.ErrorResponse;
 import com.applexumber.nobsv2.product.model.Product;
 import com.applexumber.nobsv2.product.model.ProductDTO;
 import com.applexumber.nobsv2.product.model.UpdateProductCommand;
 import com.applexumber.nobsv2.product.services.*;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -50,4 +53,5 @@ public class ProductController {
     public ResponseEntity<Void> deleteProduct(@PathVariable Integer id) {
         return deleteProductService.execute(id);
     }
+
 }

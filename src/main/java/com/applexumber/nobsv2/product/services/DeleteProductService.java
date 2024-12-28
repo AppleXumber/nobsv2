@@ -1,5 +1,6 @@
 package com.applexumber.nobsv2.product.services;
 
+import com.applexumber.nobsv2.exceptions.ProductNotFoundException;
 import com.applexumber.nobsv2.product.Command;
 import com.applexumber.nobsv2.product.ProductRepository;
 import com.applexumber.nobsv2.product.model.Product;
@@ -12,7 +13,7 @@ import java.util.Optional;
 @Service
 public class DeleteProductService implements Command<Integer, Void> {
 
-    private ProductRepository productRepository;
+    private final ProductRepository productRepository;
 
     public DeleteProductService(ProductRepository productRepository) {
         this.productRepository = productRepository;
@@ -27,7 +28,7 @@ public class DeleteProductService implements Command<Integer, Void> {
             return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
         }
 
-        return null;
+        throw new ProductNotFoundException();
     }
 }
 
