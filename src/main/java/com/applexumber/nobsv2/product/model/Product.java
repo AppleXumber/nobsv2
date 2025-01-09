@@ -2,6 +2,7 @@ package com.applexumber.nobsv2.product.model;
 
 import com.applexumber.nobsv2.exceptions.ErrorMessages;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 import jakarta.validation.constraints.Size;
@@ -35,6 +36,7 @@ public class Product {
     }
 
     @NotNull(message = "Name is required")
+    @NotBlank(message = "Name is required")
     @Column(name = "name")
     private String name;
 
