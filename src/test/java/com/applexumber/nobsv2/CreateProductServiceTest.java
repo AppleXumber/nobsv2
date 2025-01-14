@@ -1,12 +1,9 @@
 package com.applexumber.nobsv2;
 
-
-import com.applexumber.nobsv2.exceptions.ProductNotValidException;
 import com.applexumber.nobsv2.product.ProductRepository;
 import com.applexumber.nobsv2.product.model.Product;
 import com.applexumber.nobsv2.product.model.ProductDTO;
 import com.applexumber.nobsv2.product.services.CreateProductService;
-import com.applexumber.nobsv2.product.validators.ProductValidator;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
