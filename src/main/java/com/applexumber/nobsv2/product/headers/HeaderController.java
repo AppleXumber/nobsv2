@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HeaderController {
 
     @GetMapping("/header")
-    public String getRegionalResponse(@RequestHeader(required = false, defaultValue = "BR ") String region) {
+    public String getRegionalResponse(@RequestHeader(required = false, defaultValue = "BR") String region) {
         if(region.equals("US")) return "BALD EAGLE FREEDOM";
         if(region.equals("CA")) return "MAPLE SYRUP";
         if(region.equals("BR")) return "FUTEBOL E SAMBA CARALHO";
