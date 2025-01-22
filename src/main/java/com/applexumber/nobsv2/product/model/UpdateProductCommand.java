@@ -19,4 +19,12 @@ public class UpdateProductCommand {
     public Product getProduct() {
         return product;
     }
+
+    @Override
+    public String toString() {
+        return "UpdateProductCommand{" +
+                "id=" + id +
+                ", product=" + product +
+                '}';
+    }
 }
