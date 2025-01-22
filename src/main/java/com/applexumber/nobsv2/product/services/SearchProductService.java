@@ -1,7 +1,7 @@
 package com.applexumber.nobsv2.product.services;
 
 import com.applexumber.nobsv2.product.ProductRepository;
-import com.applexumber.nobsv2.product.Query;
+import com.applexumber.nobsv2.Query;
 import com.applexumber.nobsv2.product.model.ProductDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

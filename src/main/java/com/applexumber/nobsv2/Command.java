@@ -1,4 +1,4 @@
-package com.applexumber.nobsv2.product;
+package com.applexumber.nobsv2;
 
 import org.springframework.http.ResponseEntity;
 

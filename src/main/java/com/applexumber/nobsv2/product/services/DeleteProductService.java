@@ -1,7 +1,7 @@
 package com.applexumber.nobsv2.product.services;
 
 import com.applexumber.nobsv2.exceptions.ProductNotFoundException;
-import com.applexumber.nobsv2.product.Command;
+import com.applexumber.nobsv2.Command;
 import com.applexumber.nobsv2.product.ProductRepository;
 import com.applexumber.nobsv2.product.model.Product;
 import org.slf4j.Logger;
