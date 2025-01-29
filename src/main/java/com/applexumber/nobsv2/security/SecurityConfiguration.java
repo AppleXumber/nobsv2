@@ -31,10 +31,10 @@ public class SecurityConfiguration {
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authorize -> {
-                    /*when use actuator ->*/// authorize.anyRequest().permitAll();
-                    authorize.requestMatchers("/login").permitAll();
-                    authorize.requestMatchers("/createnewuser").permitAll();
-                    authorize.anyRequest().authenticated();
+                    /*when use actuator ->*/ authorize.anyRequest().permitAll();
+//                    authorize.requestMatchers("/login").permitAll();
+//                    authorize.requestMatchers("/createnewuser").permitAll();
+//                    authorize.anyRequest().authenticated();
                 })
                 .addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
                 .build();
